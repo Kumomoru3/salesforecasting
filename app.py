@@ -17,6 +17,7 @@ def predict():
     prediction = model.predict(final_features)
 
     output = round(prediction[0], 2)
+    output =output*-1
 
     return render_template('index.html', prediction_text='Sales should be $ {}'.format(output))
 
